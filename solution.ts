@@ -63,11 +63,37 @@ function filterActiveUsers(params: Array<UserType>): Array<UserType> | [] {
 interface Book {
   title: string;
   author: string;
-  publishedYear:number;
-  isAvailable:boolean;
+  publishedYear: number;
+  isAvailable: boolean;
 }
 
-function printBookDetails(book:Book) {
-    console.log(`Title: ${book.title}, Author: ${book.author}, Published: ${book.publishedYear}, Available: ${book.isAvailable?"Yes":"No"}`);
+function printBookDetails(book: Book) {
+  console.log(
+    `Title: ${book.title}, Author: ${book.author}, Published: ${
+      book.publishedYear
+    }, Available: ${book.isAvailable ? "Yes" : "No"}`
+  );
 }
 
+// solution 7
+
+function getUniqueValues(
+  array1: (number | string)[],
+  array2: (number | string)[]
+) {
+  const uniqueItemsArray = [...array1];
+  array2.forEach((item) => {
+    if (!uniqueItemsArray.includes(item)) uniqueItemsArray.push(item);
+  });
+  return uniqueItemsArray;
+}
+
+// solution 8
+
+type ProductType = {
+  name: string;
+  price: number;
+  quantity:number
+  discount?:number
+};
+function calculateTotalPrice(products: ProductType[]) {}
