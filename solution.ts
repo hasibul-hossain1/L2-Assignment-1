@@ -39,3 +39,8 @@ class Person{
 
 
 // solution 4
+
+function filterByRating(params:Array<{title:string,rating:number}>) :Array<{title:string,rating:number}>|[] {
+    return params.filter((item)=>item.rating>=4)
+}
+
