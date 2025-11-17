@@ -96,4 +96,13 @@ type ProductType = {
   quantity:number
   discount?:number
 };
-function calculateTotalPrice(products: ProductType[]) {}
+function calculateTotalPrice(products: ProductType[]) {
+    return products.reduce((acc,curr)=>{
+        const discount=curr.discount || 0
+        const totalPrice=curr.price * curr.quantity
+        const totalDiscountedPrice= totalPrice - (totalPrice * discount) / 100
+        return acc + totalDiscountedPrice
+    },0)
+}
+
+
