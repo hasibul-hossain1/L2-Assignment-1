@@ -1,4 +1,3 @@
-// solution 1
 
 function formatValue(
   params: string | number | boolean
@@ -13,7 +12,6 @@ function formatValue(
   throw new Error("Invalid type");
 }
 
-// solution 2
 
 function getLength(params: string | unknown[]): number {
   if (typeof params === "string") {
@@ -24,7 +22,6 @@ function getLength(params: string | unknown[]): number {
   throw new Error("Invalid Type");
 }
 
-// solution 3
 
 class Person {
   name: string;
@@ -38,7 +35,6 @@ class Person {
   }
 }
 
-// solution 4
 
 function filterByRating(
   params: Array<{ title: string; rating: number }>
@@ -46,7 +42,6 @@ function filterByRating(
   return params.filter((item) => item.rating >= 4);
 }
 
-// solution 5
 type UserType = {
   id: number;
   name: string;
@@ -58,7 +53,6 @@ function filterActiveUsers(params: Array<UserType>): Array<UserType> | [] {
   return params.filter((user) => user.isActive);
 }
 
-//solution 6
 
 interface Book {
   title: string;
@@ -75,7 +69,6 @@ function printBookDetails(book: Book) {
   );
 }
 
-// solution 7
 
 function getUniqueValues(
   array1: (number | string)[],
@@ -88,7 +81,6 @@ function getUniqueValues(
   return uniqueItemsArray;
 }
 
-// solution 8
 
 type ProductType = {
   name: string;
@@ -96,6 +88,7 @@ type ProductType = {
   quantity:number
   discount?:number
 };
+
 function calculateTotalPrice(products: ProductType[]) {
     return products.reduce((acc,curr)=>{
         const discount=curr.discount || 0
