@@ -44,3 +44,16 @@ function filterByRating(params:Array<{title:string,rating:number}>) :Array<{titl
     return params.filter((item)=>item.rating>=4)
 }
 
+// solution 5
+type UserType={
+    id:number;
+    name:string;
+    email:string;
+    isActive:boolean
+}
+
+function filterActiveUsers(params:Array<UserType>):Array<UserType>|[] {
+    return params.filter(user=>user.isActive)
+}
+
+//solution 6
